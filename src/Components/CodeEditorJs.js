@@ -26,13 +26,13 @@ export default class CodeEditor extends Component {
         return (
             <div className="editor">
                 {/* hello */}
-                <h5>Javascript</h5>
+                <p className="editor-title">index.js (Javascript)</p>
                 <CodeEditorr
                     onBeforeChange={this.handleCodeChange}
                     value = {this.props.value}
                     options = {{
                         lineWrapping : true,
-                        mode: "xml",
+                        mode: "javascript",
                         lineNumbers : true,
                         theme: 'material',
                     }}

@@ -1,10 +1,10 @@
-import React, {useState, Component } from 'react'
+import React, {useState, useEffect, Component } from 'react'
 
 export default class LiveResult extends Component {
     constructor(props){
         super(props);
         this.state = {
-            code:this.props.htmlsrc+"<style>"+this.props.csssrc+"</style><script>"+this.props.jssrc+"</scripts>"
+            code:"<html>"+this.props.htmlsrc+"<style>"+this.props.csssrc+"</style><script>"+this.props.jssrc+"</script></html>"
             
         }
 
@@ -15,7 +15,10 @@ export default class LiveResult extends Component {
     // }
     
     componentWillReceiveProps(newProps){
-        this.setState({code: newProps.htmlsrc +"<style>"+newProps.csssrc+"</style><script>"+newProps.jssrc+"</scripts>"})
+        const timeout = setTimeout(()=>{
+            this.setState({code:"<html>" +newProps.htmlsrc +"<style>"+newProps.csssrc+"</style><script>"+newProps.jssrc+"</script></html>"})
+
+        },250)
     }
 
 

@@ -1,19 +1,37 @@
 .fileexp{
     height: 5vh;
     margin-top:0;
+    margin-bottom: 0;
     top:0;
-    padding: 1px;
-    background-color: aqua;
+    padding-top: .5rem;
+    padding-left: .5rem;
+    padding-bottom: 0;
+    background-color:#4a4a4a;
+    color: white;
     display: flex;
     justify-content: auto;
     justify-items: auto;
     margin-top: 0;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+
+.cust-btn{
+    background-color: grey;
+    font-size: 1rem;
+    border-radius: 50px;
 }
 a, a:link{
     text-decoration: none;
-    color: black;
+    color: white;
     position: relative;
     left: 5px;
+}
+
+a:hover{
+    text-decoration: underline;
+    font-weight: 300;
 }
 p{
     padding: 0;
@@ -27,22 +45,31 @@ h5{
 }
 
 .editor{
-    height: 91vh;
+    height: 90vh;
     width: 50%;
     float: left;
     /* background-color: black; */
     /* color: white; */
 }
-
+.editor-title{
+    background-color: rgb(51, 51, 51);
+    margin:0;
+    color: white;
+    /* border-top-right-radius: .5rem;
+    border-top-left-radius: .5rem; */
+    padding: .5rem;
+}
 .code-editor{
     height: 100%;
 }
 .CodeMirror{
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
     min-height: 100%;
 }
 .outputbox{
-    height: 95vh;
+    height: 94vh;
     width: 50%;
     float: right;
-    background-color: gray;
+    /* background-color: gray; */
 }
