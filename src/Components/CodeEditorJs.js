@@ -6,11 +6,11 @@ import 'codemirror/mode/javascript/javascript'
 import 'codemirror/mode/css/css'
 
 import { Controlled as CodeEditorr} from 'react-codemirror2'
-export default class CodeEditorHTML extends Component {
+export default class CodeEditor extends Component {
     constructor(props){
         super(props);
         this.state = {
-            code:'//Put your code here'
+            code:'//This is js editor'
         }
     }
     

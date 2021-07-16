@@ -1,9 +1,11 @@
 import './App.css';
 import React, { useState, Component } from 'react';
+import { Router, Route, Switch } from "react-router";
 import FileExplorer from './Components/FileExplorer';
-import CodeEditor from './Components/CodeEditorHTML';
+import CodeEditorHTML from './Components/CodeEditorHTML';
 import LiveResults from './Components/LiveResult';
-
+import CodeEditorCss from './Components/CodeEditorCss';
+import CodeEditorJs from './Components/CodeEditorJs';
 export default class App extends Component {
   
   constructor(props){
@@ -22,7 +24,7 @@ export default class App extends Component {
     return (
       <div className="App">
         <FileExplorer/>
-        <CodeEditor
+        <CodeEditorHTML
           codelanguage = ""
           value = {this.state.htmlcode}
           onCodeChange = {this.setCode}
