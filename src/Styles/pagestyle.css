@@ -1,0 +1,28 @@
+.fileexp{
+    height: 7vh;
+    margin-top:0;
+    top:0;
+    padding: 1px;
+    background-color: aqua;
+}
+
+.editor{
+    height: 93vh;
+    width: 50%;
+    float: left;
+    /* background-color: black; */
+    /* color: white; */
+}
+
+.code-editor{
+    height: 100%;
+}
+.CodeMirror{
+    min-height: 100%;
+}
+.outputbox{
+    height: 93vh;
+    width: 50%;
+    float: right;
+    background-color: gray;
+}

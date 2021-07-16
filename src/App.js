@@ -1,25 +1,36 @@
-import logo from './logo.svg';
 import './App.css';
+import React, { useState, Component } from 'react';
+import FileExplorer from './Components/FileExplorer';
+import CodeEditor from './Components/CodeEditorHTML';
+import LiveResults from './Components/LiveResult';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends Component {
+  
+  constructor(props){
+    super(props)
+    this.state = {
+      htmlcode:'',
+      csscode: '',
+      jscode:''
+    }
+  }
+  setCode = (val) =>{
+    this.setState({htmlcode: val})
+  }
+  render(){
+
+    return (
+      <div className="App">
+        <FileExplorer/>
+        <CodeEditor
+          codelanguage = ""
+          value = {this.state.htmlcode}
+          onCodeChange = {this.setCode}
+        />
+        <LiveResults/>
+      </div>
+    );
+  }
 }
 
-export default App;
+
