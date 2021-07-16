@@ -26,6 +26,7 @@ export default class CodeEditorHTML extends Component {
         return (
             <div className="editor">
                 {/* hello */}
+                <h5>HTML</h5>
                 <CodeEditorr
                     onBeforeChange={this.handleCodeChange}
                     value = {this.props.value}

@@ -1,13 +1,33 @@
 .fileexp{
-    height: 7vh;
+    height: 5vh;
     margin-top:0;
     top:0;
     padding: 1px;
     background-color: aqua;
+    display: flex;
+    justify-content: auto;
+    justify-items: auto;
+    margin-top: 0;
+}
+a, a:link{
+    text-decoration: none;
+    color: black;
+    position: relative;
+    left: 5px;
+}
+p{
+    padding: 0;
+    margin-top: 0;
+}
+h5{
+    height: 1vh;
+    padding: 0;
+    margin-top: 1vh;
+    margin-bottom: 2vh;
 }
 
 .editor{
-    height: 93vh;
+    height: 91vh;
     width: 50%;
     float: left;
     /* background-color: black; */
@@ -21,7 +41,7 @@
     min-height: 100%;
 }
 .outputbox{
-    height: 93vh;
+    height: 95vh;
     width: 50%;
     float: right;
     background-color: gray;
