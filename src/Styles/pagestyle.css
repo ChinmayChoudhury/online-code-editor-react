@@ -43,16 +43,16 @@ body {
 }
 
 .split_bar {
-  background-color: rgb(29, 29, 29);
+  background-color: rgb(0, 0, 0);
   width: 1vw;
-  height: 95vh;
+  height: 94.5vh;
   float: left;
   cursor: col-resize;
 }
 
 
 .fileexp{
-    height: 5vh;
+    height: 6vh;
     margin-top:0;
     margin-bottom: 0;
     top:0;
@@ -60,11 +60,12 @@ body {
     padding-top: .5rem;
     padding-left: .5rem;
     padding-bottom: 0;
-    background-color:#4a4a4a;
+    background-color: #1f2023/*#4a4a4a*/;
     color: white;
     display: flex;
+    flex-direction: row;
     justify-content: auto;
-    justify-items: auto;
+    justify-items: center;
     margin-top: 0;
     font-family: 'Poppins', sans-serif;
     
@@ -73,10 +74,27 @@ body {
 
 .cust-btn{
     /* padding: .2rem; */
-    background-color: grey;
+    background-color: rgb(54, 54, 54);
     font-size: 1rem;
-    /* border: .5px solid white; */
+    width: 5rem;
+    padding: .3rem;
+    /* height: 100%; */
+    color: white;
+    border:0;
+    /* border: 5px solid white; */
     border-radius: 50px;
+}
+
+
+.html-btn{
+    color: orange
+}
+
+.css-btn{
+    color: aqua
+}
+.js-btn{
+    color: yellow
 }
 a, a:link{
     text-decoration: none;
@@ -101,14 +119,15 @@ h5{
 }
 
 .editor{
-    height: 90vh;
+    height: 89.5vh;
     /* width: 50%; */
     /* float: left; */
     /* background-color: black; */
     /* color: white; */
 }
 .editor-title{
-    background-color: rgb(51, 51, 51);
+    /* background-color: rgb(51, 51, 51); */
+    background-color: #2d2f34;
     margin:0;
     color: white;
     /* border-top-right-radius: .5rem;
@@ -124,7 +143,7 @@ h5{
     min-height: 100%;
 }
 .outputbox{
-    height: 95vh;
+    height: 94.5vh;
     width: 49vw;
     /* float: right; */
     /* background-color: gray; */

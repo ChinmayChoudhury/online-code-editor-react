@@ -46,21 +46,21 @@ export default function App() {
         <FileExplorer/>
         <div className="container">
           <Switch>
-            <Route exact path="/">
+            <Route exact path={process.env.PUBLIC_URL}>
               <CodeEditorHTML
                 codelanguage = ""
                 value = {htmlcode}
                 onCodeChange = {setHTMLCode}
               />
             </Route>
-            <Route exact path="/css">
+            <Route exact path={process.env.PUBLIC_URL + '/css'}>
               <CodeEditorCss
                 codelanguage = ""
                 value = {csscode}
                 onCodeChange = {setCSSCode}
               />
             </Route>
-            <Route exact path="/javascript">
+            <Route exact path={process.env.PUBLIC_URL + '/javascript'}>
               <CodeEditorJs
                 codelanguage = ""
                 value = {jscode}

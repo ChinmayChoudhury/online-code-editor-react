@@ -11,22 +11,40 @@ export default class FileExplorer extends Component {
         }
     }
 
+    handleClick= ()=>{
+        var url = "https://pastebin.com/api/api_post.php";
 
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", url);
+
+        xhr.setRequestHeader("Content-Type", "application/json");
+
+        xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4) {
+            console.log(xhr.status);
+            console.log(xhr.responseText);
+        }};
+
+        var data = '{"api_option":"paste","api_user_key":"","api_paste_private":"1","api_paste_name":"chinmay.html","api_paste_expire_date":"10M","api_paste_format":"html","api_dev_key":"rihuVYFGlhyrgBeH2zr7pbVkChI8_hu7","api_paste_code":"hello"}';
+
+        xhr.send(data);
+    }
 
     render() {
         return (
             <div className="fileexp">
-                <p className="title">FileExplorer: </p><span>&nbsp;&nbsp;&nbsp;</span>
+                <p className="title">FileExplorer </p><span>&nbsp;&nbsp;&nbsp;</span>
                 
-                <Link to="/" >
-                    <button className="cust-btn">HTML</button>
+                <Link to={process.env.PUBLIC_URL} >
+                    <button className="cust-btn html-btn">HTML</button>
                 </Link><span>&nbsp;&nbsp;&nbsp;</span>
-                <Link to="/css" >
-                    <button className="cust-btn">CSS</button>    
+                <Link to={process.env.PUBLIC_URL + '/css'} >
+                    <button className="cust-btn css-btn">CSS</button>    
                 </Link><span>&nbsp;&nbsp;&nbsp;</span>
-                <Link to="/javascript" >
-                <button className="cust-btn">JS</button>
+                <Link to={process.env.PUBLIC_URL + '/javascript'} >
+                <button className="cust-btn js-btn">JS</button>
                 </Link><span>&nbsp;&nbsp;&nbsp;</span>
+               
             </div>
         )
     }
