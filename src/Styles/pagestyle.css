@@ -1,8 +1,62 @@
+
+html {
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "PingFang TC", "Heiti TC", 微軟正黑體, sans-serif;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  /* display: flex;
+  flex-direction: column; */
+}
+
+
+/* next 4 css till .split_bar is for resizing, resizing is lil buggy tho, when you change
+    editor (eg. you go to css from html, resizing doesn't work anymore.
+*/
+.container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.split_left {
+  width: 50vw;
+  /* flex: 1; */
+  /* background-color: $green; */
+}
+
+.split_right {
+  flex: 1; 
+  /* background-color: $gray; */
+}
+
+.split_bar {
+  background-color: rgb(29, 29, 29);
+  width: 1vw;
+  height: 95vh;
+  float: left;
+  cursor: col-resize;
+}
+
+
 .fileexp{
     height: 5vh;
     margin-top:0;
     margin-bottom: 0;
     top:0;
+    flex:1;
     padding-top: .5rem;
     padding-left: .5rem;
     padding-bottom: 0;
@@ -18,8 +72,10 @@
 
 
 .cust-btn{
+    /* padding: .2rem; */
     background-color: grey;
     font-size: 1rem;
+    /* border: .5px solid white; */
     border-radius: 50px;
 }
 a, a:link{
@@ -46,8 +102,8 @@ h5{
 
 .editor{
     height: 90vh;
-    width: 50%;
-    float: left;
+    /* width: 50%; */
+    /* float: left; */
     /* background-color: black; */
     /* color: white; */
 }
@@ -68,8 +124,8 @@ h5{
     min-height: 100%;
 }
 .outputbox{
-    height: 94vh;
-    width: 50%;
-    float: right;
+    height: 95vh;
+    width: 49vw;
+    /* float: right; */
     /* background-color: gray; */
 }

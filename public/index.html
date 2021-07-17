@@ -23,4 +23,40 @@
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
   </body>
+  <script>
+
+    // This script is for making editor and live output resizable.
+    // There is bug tho, when you change file (eg, you are in JS and then open CSS file), 
+    //  resizing stops working and all size go backs to default as given in css.
+    // Resizing starts working again if you refresh the page, there won't be any loss of contents
+    // in the code editor
+
+    const left = document.querySelector('.split_left');
+    const right = document.querySelector('.split_right');
+    const bar = document.querySelector('.split_bar');
+
+      let mouse_is_down = false;
+
+      bar.addEventListener('mousedown', (e) => {
+        mouse_is_down = true;
+        console.log("mouse cicked");
+      })
+
+      document.addEventListener('mousemove', (e) => {
+        if (!mouse_is_down) return;
+        let lw = e.clientX / document.body.clientWidth * 100;
+        // let rw = 100-lw-2;
+        
+        // left.style.width = `${e.clientX}px`;
+        // console.log(lw);
+        // console.log(rw);
+        left.style.width = `${lw}%`;
+        // right.style.width = `${rw}%`;
+      })
+
+      document.addEventListener('mouseup', (e) => {
+        mouse_is_down = false;
+        console.log("mouse left");
+      })
+  </script>
 </html>

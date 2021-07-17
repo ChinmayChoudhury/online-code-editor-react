@@ -38,6 +38,7 @@ export default class App extends Component {
         <BrowserRouter>
       <div className="App">
         <FileExplorer/>
+        <div className="container">
           <Switch>
             <Route exact path="/">
               <CodeEditorHTML
@@ -61,10 +62,11 @@ export default class App extends Component {
               />
             </Route>
           </Switch>
-
+        <div className="split_bar"></div>
         <LiveResults htmlsrc = {this.state.htmlcode} csssrc = {this.state.csscode} 
           jssrc = {this.state.jscode}
         />
+        </div>
       </div>
         </BrowserRouter>
     );

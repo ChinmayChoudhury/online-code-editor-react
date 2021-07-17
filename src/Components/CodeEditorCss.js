@@ -24,7 +24,7 @@ export default class CodeEditor extends Component {
 
     render() {
         return (
-            <div className="editor">
+            <div className="editor split_left">
                 {/* hello */}
                 <p className="editor-title">index.css (CSS)</p>
                 <CodeEditorr

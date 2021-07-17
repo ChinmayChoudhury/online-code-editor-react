@@ -1,6 +1,18 @@
-import React, { Component } from 'react'
+import React, {useState, Component } from 'react'
 import {Link} from 'react-router-dom';
 export default class FileExplorer extends Component {
+    constructor(props){
+        super(props);
+        //not using this right now
+        this.state= {
+            isHtml: false,
+            isCss: false,
+            isJs: false
+        }
+    }
+
+
+
     render() {
         return (
             <div className="fileexp">
@@ -18,4 +30,5 @@ export default class FileExplorer extends Component {
             </div>
         )
     }
+    
 }

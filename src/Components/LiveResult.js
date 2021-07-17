@@ -24,7 +24,7 @@ export default class LiveResult extends Component {
 
     render() {
         return (
-            <div className="outputbox">
+            <div className="outputbox split_right">
                 <iframe
                     height="100%"
                     width = "100%"
