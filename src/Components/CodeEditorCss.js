@@ -18,9 +18,7 @@ export default class CodeEditor extends Component {
         // this.setState({code:value});
         this.props.onCodeChange(value);
     }
-    componentDidMount(){
-        // Prism.highlightAll();
-    }
+   
 
     render() {
         return (

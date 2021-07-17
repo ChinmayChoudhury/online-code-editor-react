@@ -9,38 +9,14 @@ import CodeEditorJs from './Components/CodeEditorJs';
 import useLocalCode from './Hooks/useLocalCode';
 export default function App() {
   
-  // constructor(props){
-  //   super(props)
-  //   this.state = {
-  //     htmlcode:'',
-  //     csscode: '',
-  //     jscode:'',
-  //     sourceCode:''
-  //   }
-  // }
 
   const [ htmlcode, setHTMLCode] = useLocalCode('htmlcode','')
   const [csscode, setCSSCode] = useLocalCode('csscode', '')
   const [ jscode , setJSCode] = useLocalCode('jscode', '')
-
-  // setHTMLCode = (val) =>{
-  //   this.setState({htmlcode: val})
-  // }
-  // setCSSCode = (val) =>{
-  //   this.setState({csscode: val})
-  // }
-
-  // setJSCode = (val)=>{
-  //   this.setState({jscode: val})
-  // }
-
-  // componentDidUpdate(){
-  //   this.setState({sourceCode: "<html>"+this.state.htmlcode+"</html>"})
-  // }
-  // sourceCode = "<html><body>"+this.state.htmlcode+"</body><style>"+this.state.csscode+"</style><script>"+this.state.jscode+"</script></html>";
-  // render(){
       
     return (
+
+      // uses browser router to navigate through the 3 files
         <BrowserRouter>
       <div className="App">
         <FileExplorer/>
@@ -76,7 +52,6 @@ export default function App() {
       </div>
         </BrowserRouter>
     );
-  // }
 }
 
 

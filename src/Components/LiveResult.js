@@ -14,11 +14,12 @@ export default class LiveResult extends Component {
     //     htmlsrc: "<html>"+this.props.htmlsrc+"</html>"
     // }
     
+    // On prop change update the source doc. Timeout is used to minimize very frequent reloads
     componentWillReceiveProps(newProps){
         const timeout = setTimeout(()=>{
             this.setState({code:"<html>" +newProps.htmlsrc +"<style>"+newProps.csssrc+"</style><script>"+newProps.jssrc+"</script></html>"})
 
-        },250)
+        },300)
     }
 
 
@@ -33,7 +34,6 @@ export default class LiveResult extends Component {
                     frameBorder="0"
                     sandbox="allow-scripts"
                     srcDoc = {this.state.code}
-
                 />
                     
                 

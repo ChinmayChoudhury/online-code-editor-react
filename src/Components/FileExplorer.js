@@ -10,7 +10,8 @@ export default class FileExplorer extends Component {
             isJs: false
         }
     }
-
+    
+    // not using this function right now. Pastebin doesn't allow any more pastes???
     handleClick= ()=>{
         var url = "https://pastebin.com/api/api_post.php";
 
@@ -34,7 +35,10 @@ export default class FileExplorer extends Component {
         return (
             <div className="fileexp">
                 <p className="title">FileExplorer </p><span>&nbsp;&nbsp;&nbsp;</span>
-                
+                {/* Links to respective file, process.env.PUBLIC_URL gets the 
+                    current url and adds further route ahead of it, 
+                    helps with gh-pages routes.
+                */}
                 <Link to={process.env.PUBLIC_URL} >
                     <button className="cust-btn html-btn">HTML</button>
                 </Link><span>&nbsp;&nbsp;&nbsp;</span>
