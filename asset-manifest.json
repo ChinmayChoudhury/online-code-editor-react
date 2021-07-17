@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/online-code-editor-react/static/css/main.c013a8fe.chunk.css",
-    "main.js": "/online-code-editor-react/static/js/main.dda30f35.chunk.js",
-    "main.js.map": "/online-code-editor-react/static/js/main.dda30f35.chunk.js.map",
+    "main.js": "/online-code-editor-react/static/js/main.4973e422.chunk.js",
+    "main.js.map": "/online-code-editor-react/static/js/main.4973e422.chunk.js.map",
     "runtime-main.js": "/online-code-editor-react/static/js/runtime-main.938b672f.js",
     "runtime-main.js.map": "/online-code-editor-react/static/js/runtime-main.938b672f.js.map",
     "static/css/2.3ceb25c6.chunk.css": "/online-code-editor-react/static/css/2.3ceb25c6.chunk.css",
@@ -18,6 +18,6 @@
     "static/css/2.3ceb25c6.chunk.css",
     "static/js/2.8205d38d.chunk.js",
     "static/css/main.c013a8fe.chunk.css",
-    "static/js/main.dda30f35.chunk.js"
+    "static/js/main.4973e422.chunk.js"
   ]
 }
